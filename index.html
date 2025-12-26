@@ -19,15 +19,21 @@
       <nav class="navigation">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link active">Главная</a>
+            <a href="#main" class="nav-link active">Главная</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">Проекты</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Обо мне</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Связаться</a></li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Проекты</a>
+          </li>
+          <li class="nav-item">
+            <a href="#developer" class="nav-link">Обо мне</a>
+          </li>
+          <li class="nav-item">
+            <a href="#feedback" class="nav-link">Связаться</a>
+          </li>
         </ul>
       </nav>
     </div>
-    <header class="header container">
+    <header class="header container" id="main">
       <img src="images/avatar.png" alt="Елена Лазюк" class="header-photo" />
       <div class="header-text">
         <strong class="header-strong">Привет 👋</strong>
@@ -98,15 +104,15 @@
         </div>
       </div>
     </header>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="section-heading">Последние проекты</h2>
         <div class="cards">
           <div class="card">
             <img
+              class="card-image"
               src="images/portfolio/image 1.jpg"
               alt="Мобильное приложение"
-              class="card-image"
             />
             <div class="card-text-wrapper">
               <h3 class="card-title">Мобильное приложение</h3>
@@ -145,9 +151,9 @@
           </div>
           <div class="card">
             <img
+              class="card-image"
               src="images/portfolio/image 2.png"
               alt="Одностраничный промо-сайт"
-              class="card-image"
             />
             <div class="card-text-wrapper">
               <h3 class="card-title">Одностраничный промо-сайт</h3>
@@ -182,7 +188,7 @@
         </div>
       </div>
     </section>
-    <section class="developer container">
+    <section class="developer container" id="developer">
       <img
         src="images/photo.jpg"
         alt="фото Лазюк Елены"
@@ -208,7 +214,7 @@
         />
       </div>
     </section>
-    <section class="skills container">
+    <section class="skills container" id="skills">
       <h2 class="skills-title">Работаю с разными языками и инструментами</h2>
       <ul class="tags">
         <li class="tags-item"><a href="#" class="tag">HTML</a></li>
@@ -224,35 +230,49 @@
         <li class="tags-item"><a href="#" class="tag">SASS</a></li>
       </ul>
     </section>
-    <section class="feedback form-container">
-      <h2 class="feedback-title">Готов обсудить проект...</h2>
-      <form action="#" class="form">
-        <div class="input-group">
-          <label for="userName" class="input-label">Имя</label>
-          <input id="userName" type="text" class="input" />
-        </div>
+    <section class="feedback" id="feedback">
+      <img src="images/hand.png" alt="hand" class="feedback-hand" />
+      <div class="form-container">
+        <h2 class="feedback-title">Готов обсудить проект...</h2>
+        <form action="#" class="form">
+          <div class="input-group">
+            <label for="userName" class="input-label">Имя</label>
+            <input id="userName" name="client_name" type="text" class="input" />
+          </div>
 
-        <div class="input-group">
-          <label for="userEmail" class="input-label">Email</label>
-          <input id="userEmail" type="text" class="input" />
-        </div>
+          <div class="input-group">
+            <label for="userEmail" class="input-label">Email</label>
+            <input
+              id="userEmail"
+              name="client_email"
+              type="text"
+              class="input"
+            />
+          </div>
 
-        <div class="input-group">
-          <label for="userMessage" class="input-label">Сообщение</label>
-          <textarea
-            id="userMessage"
-            cols="30"
-            rows="10"
-            class="input textarea"
-          ></textarea>
-        </div>
-        <div class="button-group">
-          <button type="submit" class="submit-button">
-            <img src="images/icons/send.svg" alt="send-icon" class="cv-icon" />
-            <span class="cv-text">Отправить</span>
-          </button>
-        </div>
-      </form>
+          <div class="input-group">
+            <label for="userMessage" class="input-label">Сообщение</label>
+            <textarea
+              id="userMessage"
+              name="client_message"
+              cols="30"
+              rows="10"
+              class="input textarea"
+            ></textarea>
+          </div>
+          <div class="button-group">
+            <button type="submit" class="submit-button">
+              <img
+                src="images/icons/send.svg"
+                alt="send-icon"
+                class="cv-icon"
+              />
+              <span class="cv-text">Отправить</span>
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
